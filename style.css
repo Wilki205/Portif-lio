@@ -464,7 +464,7 @@ footer {
 
 
 /* --- CELULARES PEQUENOS (Até 480px) --- */
-@media (max-width: 480px) {
+@media (max-width: 406px) {
     body {
         padding: 0; /* Remove o padding do corpo para aproveitar a tela toda */
     }
