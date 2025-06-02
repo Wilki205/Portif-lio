@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-html {
-    scroll-behavior: smooth;
+/* Normalização e Regra de Ouro do Box-Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -233,7 +235,7 @@ body {
 
 .projeto-card img {
     width: 100%;
-    height: 200px;
+    height: 290px;
     object-fit: cover;
 }
 
@@ -396,41 +398,93 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsividade */
+/* =============================================
+   REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
+   ============================================= */
+
+/* --- TABLETS E DESKTOPS MENORES (Até 992px) --- */
 @media (max-width: 992px) {
     .portfolio-container {
-        padding: 2rem;
+        padding: 2rem; /* Reduz o espaçamento principal */
     }
+
+    /* Cabeçalho empilha verticalmente */
     .about-me {
         flex-direction: column;
         text-align: center;
     }
+
+    .about-me-content {
+        text-align: justify; /* Mantém o texto justificado */
+    }
+
     .profile-picture-container {
-        margin-left: 0;
-        margin-top: 2rem;
+        margin-left: 0; /* Remove a margem da foto */
+        margin-top: 2.5rem; /* Adiciona espaço acima da foto */
+        margin-bottom: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* O grid do bloco roxo vira coluna única */
     }
 }
 
+
+/* --- CELULARES (Até 768px) --- */
 @media (max-width: 768px) {
-    .contact-info, .grid-container {
+    .section-container h2,
+    .main-content h2 {
+        font-size: 1.8rem; /* Diminui o tamanho dos títulos de seção */
+    }
+
+    .about-me-content h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Grids de projetos e habilidades viram coluna única */
+    .projetos-grid,
+    .habilidades-categorias {
         grid-template-columns: 1fr;
     }
-    .soft-skills ul, .skill-set ul {
-        grid-template-columns: 1fr;
+
+    .main-content {
+        padding: 2rem; /* Reduz o espaçamento do bloco roxo */
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr; /* Contatos em coluna única */
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .contact-info p {
+        justify-content: center;
     }
 }
 
+
+/* --- CELULARES PEQUENOS (Até 480px) --- */
 @media (max-width: 480px) {
     body {
-        padding: 1rem;
+        padding: 0; /* Remove o padding do corpo para aproveitar a tela toda */
     }
+
     .portfolio-container {
         padding: 1.5rem;
+        border-radius: 0; /* Remove o arredondamento em telas muito pequenas */
     }
-    .about-me-content h1 {
-        font-size: 1.5rem;
+
+    .main-content {
+        padding: 1.5rem;
     }
-    .soft-skills ul, .skill-set ul {
-        grid-template-columns: 1fr;
+
+    .projeto-card-content,
+    .categoria {
+        padding: 1rem; /* Reduz espaçamento interno dos cards */
+    }
+    
+    .btn-secundario, .btn {
+        padding: 0.6rem 1rem; /* Botões um pouco menores */
+        font-size: 0.9rem;
     }
 }
