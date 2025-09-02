@@ -81,5 +81,5 @@ Não há necessidade de dependências complexas. Para rodar este projeto em sua 
 
 **Wilker Santos**
 
-* **LinkedIn**: [https://www.linkedin.com/in/wilker-santos-557348259/](https://www.linkedin.com/in/wilker-santos-557348259/)
+* **LinkedIn**: [https://www.linkedin.com/in/wilker-santos-557348259/](https://www.linkedin.com/in/wilkisonb/)
 * **GitHub**: [https://github.com/Wilki205](https://github.com/Wilki205)
