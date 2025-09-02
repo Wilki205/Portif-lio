@@ -22,7 +22,7 @@ O projeto está disponível para visualização online através do GitHub Pages.
 
 ### 🖼️ Screenshot
 
-![Preview do Portfólio](./img/pt.png) 
+![Preview do Portfólio](./imagens/pt.png) 
 
 
 ---
